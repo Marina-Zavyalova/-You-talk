@@ -1,0 +1,176 @@
+Задание 5.10.1
+const Number = +prompt("Введите любое число");
+const result1 = Number * Number;
+const result2 = Number * Number * Number;
+alert(`Введенное число - ${Number}\n
+Квадрат числа - ${result1}\n
+Куб числа - ${result2}\n`);
+
+Задание 5.10.2
+const sale = prompt("Введите промокод").toLowerCase();
+const promo = "скидка";
+if (sale === promo) {
+  alert("Промокод применен");
+} else {
+  alert("Промокод не работает");
+}
+
+Задание 5.10.3
+const userName = prompt("Введите имя");
+const userYear = prompt("Введите год рождения");
+if (isNaN(userYear)) {
+  alert("Год должен быть числом");
+} else {
+  alert(`${userName}: ${2024-userYear}!`);
+}
+
+Задание 5.10.4
+const userName = prompt("Введите свое имя");
+const userYear = +prompt("Введите год рождения");
+const userAge = 2024 - userYear;
+if (isNaN(userAge)) {
+  alert("Год не число или пустое имя");
+} else {
+  if (userAge % 10 === 1) {
+    alert(`${userName}: ${userAge} год`);
+  }
+  if (userAge % 10 === 2 || userAge % 10 === 3 || userAge % 10 === 4) {
+    alert(`${userName}: ${userAge} года`);
+  } else {
+    alert(`${userName}: ${userAge} лет`);
+  }
+}
+
+Задание 5.10.5
+const userAge = +prompt("Введите свой возраст");
+let sumCredit;
+if (isNaN(userAge)) {
+  alert("Неверный ввод возраста");
+} else {
+  if (userAge < 18 || userAge > 65) {
+    alert("Кредит не одобрен");
+  } else {
+    if (18 <= userAge && userAge <= 21) {
+      sumCredit = +prompt(
+        "Мы можем вам выдать максимум 50000.\nВведите сумму кратную 1000."
+      );
+    }
+    if (sumCredit > 50000) {
+      sumCredit = +prompt(
+        "Мы можем вам выдать максимум 50000.\nВведите сумму кратную 1000."
+      );
+    } else {
+      if (22 <= userAge && userAge <= 35) {
+        sumCredit = +prompt(
+          "Мы можем вам выдать максимум 400000.\nВведите сумму кратную 1000."
+        );
+      }
+      if (sumCredit > 400000) {
+        sumCredit = +prompt(
+          "Мы можем вам выдать максимум 400000.\nВведите сумму кратную 1000."
+        );
+      } else {
+        if (36 <= userAge && userAge <= 65) {
+          sumCredit = +prompt(
+            "Мы можем вам выдать максимум 1000000.\nВведите сумму кратную 1000."
+          );
+        }
+        if (sumCredit > 1000000) {
+          sumCredit = +prompt(
+            "Мы можем вам выдать максимум 1000000.\nВведите сумму кратную 1000."
+          );
+        }
+      }
+
+      if (sumCredit % 1000 !== 0) {
+        alert(
+          `Вы ввели значение не кратное 1000. Мы можем выдать ${
+            sumCredit - (sumCredit % 1000)
+          }`
+        );
+      } else {
+        alert(`Вам одобрен кредит на сумму ${sumCredit}`);
+      }
+    }
+  }
+}
+
+
+Задание 6.6.1
+
+
+let word=prompt("Введите слово").toLowerCase();
+let newWord="";
+for (let k=word.length-1; k>=0; k=k-1)
+   {newWord=newWord+word[k];}
+if(newWord===word)
+{alert(`Слово ${word} является палиндромом`);
+}
+else
+{alert(`Слово \"${word}"\ не является палиндромом`);
+}
+
+Задание 6.6.2
+const arr = [1, 2, 3, 1, 5, 4, 2, 3, 5, 'they', 'don\'t', 'know', 'that', 'we', 'know', 'that', 'they', 'know' ];
+
+const newArr = new Set(arr);
+const uniqueArr = Array.from(newArr);
+
+console.log(uniqueArr);
+
+
+
+Задание 6.6.3
+let number = +prompt("Введите любое число");
+
+let arr = [];
+
+for (i = 0; i <= number; i+=1) {
+  arr.push(i);
+}
+
+console.log(arr);
+
+
+
+
+Задание 6.6.4
+const boardSize = 3; //размерность игрового поля
+const board = []; //игровое поле
+
+//заполняем игровое поле строками с крестиками и ноликами
+for (let i = 0; i < boardSize; i++) {
+  const row = []; //строка игрового поля
+
+   //заполняем строку игрового
+  for (let j = 0; j < boardSize; j++) {
+    row.push(Math.random() < 0.3 ? "X" : "O"); //заполняем строку игрового поля случайным набором крестиков и ноликов
+  }
+
+  board.push(row); //заполняем игровое поле строками
+  console.log(board[i].join(" ")); //выводим каждую из строк игрового поля в консоль
+}
+
+
+Задание 6.6.5
+const obj = {
+        some: 'some',
+        dom: 'text',
+        arr: [1, 2, 3, 4, 5],
+        tom: 'there'
+    };
+
+const arrValues = [];
+
+//обходим ключи объекта
+for(let key in obj){
+  //проверяем, является ли свойство массивом
+  if(Array.isArray(obj[key])){
+     //обходим свойство-массив и добавляем каждый элемент этого массива в arrValues
+    for(let i=0; i<obj[key].length; i+=1){
+      arrValues.push(obj[key][i])
+}
+  } else{
+  arrValues.push(obj[key])}
+    console.log(arrValues);
+}
