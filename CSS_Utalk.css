@@ -1,0 +1,662 @@
+* {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+body{
+    margin: 0;
+}
+
+.layout{
+margin: 0; 
+}
+
+.header{
+display: flex;
+padding-left: 16px;
+padding-right: 16px;
+justify-content: space-between;
+height: 56px;
+}
+.header__menu{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+column-gap: 16px;
+white-space: nowrap; /*не переносит текст вниз */
+ }
+
+
+.header__menu1{
+    display: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15.96px;
+    text-align: center;
+    white-space: nowrap;
+}
+.header__menu1_button{
+    display: flex;  
+}
+#header__menu1_button{
+    width: 230px;
+    height: 48px;
+    background-color: #E3F5F5;
+    border-radius: 4px;
+    border: 1px solid #E3F5F5;
+    color: #03B2A5;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19.5px;
+    text-align: center;
+} 
+.logo{
+    width: 48px;
+    height: 100%;
+}
+.burger_menu{
+    width: 40px;
+    height: 100%;
+}
+.header__icon1{
+    text-align:center;
+}
+
+
+.header_line{
+    height: 1px;
+    border-top-style: solid;
+    border-color: #EFF5FB;
+}
+
+
+main{
+    padding-left: 16px;
+    padding-right: 16px;    
+}
+.main__start{
+    display: flex;
+    font-weight: 400;
+    font-size: 12px;
+    margin-top: 24px;
+  
+}
+.main__start_arrow{
+    width: 16px;
+    height: 16px;
+    text-align: center;
+}
+.main__blog{
+    font-weight: 600;
+    font-size: 24px;
+    margin-top: 24px;
+}
+.main__article_filter{
+display: flex;
+flex-flow: row nowrap; 
+width: 100%;
+margin-top: 24px;
+margin-bottom: 24px;
+gap: 8px;
+overflow-x: auto; /*Горизонтальная прокрутка*/
+scrollbar-width: none; /*Чтобы скролл(прокрутка) была невидимой*/
+white-space: nowrap; /*Запрещает перенос текста внутри кнопок*/
+}
+
+
+    
+
+.main__article_filter_button{
+    display:flex;
+    padding: 6px, 8px;
+    border-radius: 24px;
+    background-color: white;
+    align-items: center;
+    gap: 8px;
+    height: 32px;
+    border:1px solid #C1C5CD;
+   }
+   .main__article_filter_button:hover{ /*при наведении на кнопку изм-ся цвет и появляется курсор*/
+    border:2px solid #5a5b5e;
+    cursor: pointer;
+   } 
+ 
+   .article{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid #DEDEDE;
+    margin-bottom: 16px;
+   }
+   .article__body{
+    display: flex;
+    flex-direction: column;
+    padding:16px;
+   }
+
+   .article__image{
+    position: relative;
+   }
+
+    /* для картинок нужно задавать больше свойств, т.к. они строчные. Лучше обязательно указывать высоту */
+   .img_eggs, .img_run, .img_sleep, .img_water, .img_square, .img_grand, .img_smile2, .img_people2{
+    width: 100%;
+    height: 206px;
+    object-fit: cover; /*картинка должна заполнить весь div, если св-во contain, то картинка не будет менять размер*/
+    object-position: center; /*если картинка больше, чем div, то по этому свойству покажет центр картинки*/
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px; 
+   }
+  
+   .article__image_unicorn{
+display: inline-flex;
+flex-direction: column;
+align-items: flex-start; /*делает кнопку по ширине текста*/
+white-space: nowrap; /*Запрещает перенос текста внутри кнопок*/
+padding-top: 8px;
+padding-left: 8px;
+gap: 4px;
+position: absolute;
+width: fit-content;
+gap: 8px;
+  }
+
+.article__image_unicorn_1{
+    display: inline-flex;
+    font-weight: 600;
+    font-size: 14px;
+    height: 32px;
+    border-radius: 24px;
+    align-items: center;
+    height: 20px;
+    border: 1px solid #FFFFFFB2;
+   }
+
+   .article__header{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    padding-bottom: 4px;
+    color: #333333;
+   }
+
+   .article__author{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    padding-bottom: 8px;
+    color: #494949;
+   }
+
+   .article__description{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    padding-bottom: 8px;
+    color: #333333;
+   }
+
+   .article__data{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #868686;
+    padding-bottom: 16px;
+   }
+
+   .article__button{
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    width: 100%;
+   }
+
+   .article__button_more{
+    width: 182px;
+    height: 48px;
+    background-color: #35B3A9;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    border-radius: 4px;
+    border:1px solid #35B3A9;
+   }
+
+   .article__button_more:hover{ /*при наведении на кнопку изм-ся цвет и появляется курсор*/
+    border:2px solid #144641;
+    cursor: pointer;
+   }
+
+   .footer{
+    background-color: #2963A3;
+    width: 100%;
+   }
+   .footer__content{
+    display: flex;
+    flex-direction: row;
+    margin: 59px 16px 0px 16px;
+   }
+
+   .footer__content_1, .footer__content_2{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 21px;
+   }
+   .footer__content_1_text{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+   }
+
+   .footer__more{
+    display: flex;
+    flex-direction: column;
+    margin: 23px 16px 0px 16px;
+   }
+   .footer__more_1{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    color: #FFFFFF;
+   }
+input{
+    display: block;
+    border: 1px solid #9D9D9D33;
+    border-radius: 4px;
+    height: 48px;
+    align-items: center;
+    width: 100%;
+}
+.footer__more_icon{
+    display:none; /*будет отображаться только при определенном разрешении, где display=block*/
+    background-color: #16C8BB;
+    width: 64px;
+    height: 48px;
+    border-radius: 4px;
+    background-image: url(/картинки/icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.footer__more_button{
+    position: relative;
+}
+
+   .footer__more_3{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #FFFFFF;
+    letter-spacing: 0.25px;
+    opacity: 70%;
+   }
+   .footer__icon_1{
+    display: flex;
+    margin: 5px 16px 0px 16px;
+    align-items: center;
+   }
+   .footer__icon_2{
+    display: flex;
+    margin: 20px 16px 20px 16px;
+    gap: 16px;
+    align-items: center;
+   }
+
+   .footer__line{
+    height: 1px;
+    border-top-style: solid;
+    border-color: #9D9D9D;
+   }
+   .footer__info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 16px 0px 16px;
+    padding-bottom: 10px;
+   }
+   .footer__info_1{
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 20px;
+    opacity: 70%;
+  }
+
+  @media (min-width:414px) and (max-width:768px){
+    .main__article_filter{
+        flex-flow: row wrap; 
+    }        /*лучше media подключать в конце файла, т.к. в начале могут  не работать*/
+}
+@media (min-width:414px){
+    .footer__more_icon{
+        display:block; 
+    }
+   #main__unicorn_border{
+   border: 2px solid #16C8BB;
+   }  
+}
+
+@media (min-width: 1024px) {
+.header__menu1{
+    display:block; 
+}
+.header__burger_menu{
+    display:none; 
+}
+}
+
+
+@media (min-width:768px) and (max-width:1024px){
+    .main{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: (18px 56px 72px 1fr 48px); /*задаем кол-во и размеры рядов*/
+        grid-template-areas:
+        "main__start"
+        "main__blog"
+        "main__article_filter"
+        "article"
+        "article__button";   
+    }  
+    .main__start{
+        display: -ms-inline-grid;
+        grid-column: span 6;
+       }
+    .article__section{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-column: span 6;
+        gap: 24px;
+    }
+    
+    .article{
+        display: grid;
+        grid-column: span 6; /*займи 6 колонок*/
+        grid-template-areas: 
+        "article__image"
+        "article__body";  
+    }
+    .article:nth-child(-n+2){
+        grid-column: span 6;
+        grid-template-rows: 404px 1fr;
+    }
+    .article:nth-child(n+3){
+        grid-template-rows: 206px 1fr;
+        grid-column: span 3;
+        
+    }
+   
+   .img_eggs, .img_run{
+    object-fit: cover;
+    height: 100%;
+   }
+
+   .article__button{
+    display: grid;
+    grid-column: span 6;
+    justify-content: center;
+   }
+
+
+   .footer{
+    display: grid;
+    grid-template-columns: 111px 106px 384px 1fr;
+    grid-template-rows: (repeat(5, 1fr)); /*задаем кол-во и размеры рядов*/
+    grid-template-areas:
+    "footer__content footer__content footer__more footer__more"
+    "footer__icon_1 footer__icon_1 footer__icon_1 footer__icon_1"
+    "footer__icon_2 footer__icon_2 footer__icon_2 footer__icon_2"
+    "footer__line footer__line footer__line footer__line"
+    "footer__info footer__info footer__info footer__info"; 
+    padding: 35px 20px 0px 20px;
+    gap: 30px;
+   }
+   .footer__content {
+    grid-area: footer__content; /*т.к. используем в template классы, и они пишутся с . задаем им названия*/
+   }
+    .footer__more {
+        grid-area: footer__more;
+    }
+    .footer__icon_1 {
+        grid-area: footer__icon_1;
+    }
+    .footer__icon2 {
+        grid-area: footer__icon_2;  
+    }
+    .footer__line {
+        grid-area: footer__line;  
+    }
+    .footer__info {
+        grid-area: footer__info;  
+    }
+
+
+.footer__content{
+    display: grid;
+    grid-auto-flow: row;
+    grid-column: 1/3;
+    grid-row: 1;
+    margin: 0;
+    gap: 30px;
+   }
+
+.footer__more{
+    display: grid;
+    grid-auto-flow: row;
+    grid-column: 3 / 5;
+    grid-row: 1;  
+    margin: 0;
+}
+.footer__icon_1{
+    display: -ms-inline-grid; /*картинки становятся в ряд. помогает там, где 1 div или только картинки*/
+    grid-column: span 4;
+    grid-row: 2;  
+}
+.footer__icon_2{
+    display: -ms-inline-grid;
+    grid-column: span 4;
+    grid-row: 3;  
+}
+.footer__line{
+    display: -ms-inline-grid;
+    grid-column: span 4;
+    grid-row: 4;  
+}
+.footer__info{
+    display: grid;
+    grid-auto-flow: row;
+    grid-column: span 4;
+    grid-row: 5;  
+}
+
+.footer__content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%; /*задаем кол-во и размеры рядов*/
+    grid-template-areas:
+    "footer__content_1 footer__content_2"
+   }
+  
+   .footer__content_1 {    /*т.к. используем в template классы, и они пишутся с . задаем им названия*/
+        grid-area: footer__content_1;
+    }
+    .footer__content_2 {
+        grid-area: footer__content_2;
+    }
+    .footer__content_1{
+        display: grid;
+        grid-column: 1;
+        grid-row: 1; 
+     }
+     .footer__content_2{
+        display: grid;
+        grid-column: 2;
+        grid-row: 1; 
+     }
+    }
+
+
+@media (min-width:1024px){
+    .main{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: (18px 56px 72px 1fr 48px); /*задаем кол-во и размеры рядов*/
+        grid-template-areas:
+        "main__start"
+        "main__blog"
+        "main__article_filter"
+        "article"
+        "article__button";   
+    }  
+    .main__start{
+        display: -ms-inline-grid;
+        grid-column: span 6;
+       }
+    .article__section{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-column: span 6;
+        gap: 24px;
+    }
+    
+    .article{
+        display: grid;
+        grid-column: span 6; /*займи 6 колонок*/
+        grid-template-areas: 
+        "article__image"
+        "article__body";  
+    }
+    .article:nth-child(-n+2){
+        grid-column: span 3;
+        grid-template-rows: 260px 1fr;
+    }
+    .article:nth-child(n+3){
+        grid-template-rows: 206px 1fr;
+        grid-column: span 2;
+        
+    }
+   
+   .img_eggs, .img_run{
+    object-fit: cover;
+    height: 100%;
+   }
+
+   .article__button{
+    display: grid;
+    grid-column: span 6;
+    justify-content: center;
+   }
+   main{
+    padding-left: 120px;
+    padding-right: 120px;    
+}
+.header{
+    padding-left: 120px;
+    padding-right: 120px;    
+}
+
+
+.footer{
+    display: grid;
+    grid-template-columns: 127px 106px 450px 1fr;
+    grid-template-rows: (repeat(5, 1fr)); /*задаем кол-во и размеры рядов*/
+    grid-template-areas:
+    "footer__content footer__content footer__more footer__icon_1"
+    "footer__content footer__content footer__more footer__icon_2"
+    "footer__content footer__content footer__more footer__icon_1"
+    "footer__line footer__line footer__line footer__line"
+    "footer__info footer__info footer__info footer__info"; 
+    padding: 35px 120px 0px 120px;
+    gap: 30px;
+   }
+   .footer__content {
+    grid-area: footer__content; /*т.к. используем в template классы, и они пишутся с . задаем им названия*/
+   }
+    .footer__more {
+        grid-area: footer__more;
+    }
+    .footer__icon_1 {
+        grid-area: footer__icon_1;
+    }
+    .footer__icon2 {
+        grid-area: footer__icon_2;  
+    }
+    .footer__line {
+        grid-area: footer__line;  
+    }
+    .footer__info {
+        grid-area: footer__info;  
+    }
+
+.footer__content{
+    display: grid;
+    grid-auto-flow: row;
+    grid-column: 1/3;
+    grid-row: 1/4;
+    margin: 0;
+    gap: 30px;
+   }
+
+.footer__more{
+    display: grid;
+    grid-auto-flow: row;
+    grid-column: 3;
+    grid-row: 1/4;  
+    margin: 0;
+}
+.footer__icon_1{
+    display: -ms-inline-grid; /*картинки становятся в ряд. помогает там, где 1 div или только картинки*/
+    justify-content: center;
+    grid-column: 4;
+    grid-row: 1;  
+}
+.footer__icon_2{
+    display: -ms-inline-grid;
+    justify-content: center;
+    grid-column: 4;
+    grid-row: 2/4;  
+}
+.footer__line{
+    display: -ms-inline-grid;
+    grid-column: span 4;
+    grid-row: 4;  
+}
+.footer__info{
+    display: grid;
+    grid-auto-flow: row;
+    grid-column: span 4;
+    grid-row: 5;  
+}
+
+.footer__content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%; /*задаем кол-во и размеры рядов*/
+    grid-template-areas:
+    "footer__content_1 footer__content_2"
+   }
+  
+   .footer__content_1 {    /*т.к. используем в template классы, и они пишутся с . задаем им названия*/
+        grid-area: footer__content_1;
+    }
+    .footer__content_2 {
+        grid-area: footer__content_2;
+    }
+    .footer__content_1{
+        display: grid;
+        grid-column: 1;
+        grid-row: 1; 
+     }
+     .footer__content_2{
+        display: grid;
+        grid-column: 2;
+        grid-row: 1; 
+     }
+}
+
+   
